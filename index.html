@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Quran - Faraaz Syed</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash" class="splash-screen">
+        <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+        <div class="app-name">Holy Quran</div>
+        <div class="by-line">by Faraaz Syed</div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="app-container" style="display:none;">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <span class="brand">Holy Quran by Faraaz Syed</span>
+            </div>
+            <div class="bismillah-header">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+        </header>
+
+        <!-- Home Screen -->
+        <div id="homeScreen" class="screen active">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Surah search karein...">
+            </div>
+            
+            <div class="quran-icon">📖</div>
+            
+            <div id="surahList" class="surah-list">
+                <!-- Surahs will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Surah Detail Screen -->
+        <div id="surahScreen" class="screen">
+            <div class="surah-header">
+                <button onclick="goHome()" class="back-btn">← Back</button>
+                <h2 id="surahName"></h2>
+                <span id="surahInfo"></span>
+            </div>
+            
+            <div id="ayahContainer" class="ayah-container">
+                <!-- Ayahs will be loaded here -->
+            </div>
+            
+            <div class="controls">
+                <button onclick="toggleBookmark()" class="btn btn-bookmark">🔖 Bookmark</button>
+                <button onclick="toggleAudio()" class="btn btn-audio">▶ Play</button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" onclick="showHome()">
+                <span>🏠</span>
+                <small>Home</small>
+            </button>
+            <button class="nav-btn" onclick="showBookmarks()">
+                <span>🔖</span>
+                <small>Bookmark</small>
+            </button>
+            <button class="nav-btn" onclick="showLastRead()">
+                <span>📖</span>
+                <small>Last Read</small>
+            </button>
+            <button class="nav-btn" onclick="showSettings()">
+                <span>⚙️</span>
+                <small>Settings</small>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
