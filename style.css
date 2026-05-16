@@ -12,140 +12,117 @@ body {
 .header { padding: 24px 20px 12px; }
 
 .greeting { display: flex; align-items: center; gap: 14px; }
-.greeting-icon { 
-    width: 48px; height: 48px; 
-    background: linear-gradient(135deg, #C9A96E, #B8955E); 
-    border-radius: 50%; 
-    display: flex; align-items: center; justify-content: center; 
+.greeting-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, #C9A96E, #B8955E);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
 }
 .greeting-icon svg { width: 24px; height: 24px; fill: #fff; }
+.greeting-text h1 { font-size: 20px; font-weight: 700; }
+.greeting-text p { font-size: 13px; color: #6B5344; margin-top: 2px; }
 
-.bismillah-header { 
-    text-align: center; 
-    padding: 8px 20px 18px; 
-    font-size: 27px; 
-    line-height: 1.5; 
-    color: #B8955E; 
-    font-weight: 500; 
+.bismillah-header {
+    text-align: center;
+    padding: 8px 20px 18px;
+    font-size: 27px;
+    line-height: 1.5;
+    color: #B8955E;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-.continue-card, .surah-item { 
-    margin: 0 20px 8px; 
-    background: #FAF6EC; 
-    border: 1px solid #E0D5C0; 
-    border-radius: 12px; 
-    cursor: pointer; 
-}
-.continue-card { padding: 16px 18px; display: flex; align-items: center; gap: 14px; }
-.surah-item { padding: 14px 20px; display: flex; align-items: center; gap: 14px; }
-
-.surah-num { 
-    width: 40px; height: 40px; 
-    background: #EDE5D2; 
-    border: 1.5px solid #C9A96E; 
-    border-radius: 10px; 
-    display: flex; align-items: center; justify-content: center; 
-    font-weight: 700; color: #B8955E; 
-}
-
-.surah-info { flex: 1; }
-.surah-name { font-weight: 600; font-size: 15.5px; }
-.surah-mean { font-size: 12.5px; color: #6B5344; }
-.surah-arabic { text-align: right; }
-.surah-arabic-name { font-size: 17px; color: #B8955E; }
-.surah-ayahs { font-size: 12px; color: #8B7355; }
-
-.section-label { 
-    padding: 8px 20px 10px; 
-    font-size: 12px; 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    letter-spacing: 1.5px; 
-    color: #8B7355; 
-}
-
-/* ==================== READING PAGE ==================== */
-#read {
-    background: #F8F1E3;
-    height: 100vh;
-    overflow-y: auto;
-}
-
-.read-header {
-    position: sticky; 
-    top: 0; 
-    background: #F8F1E3; 
-    padding: 16px 20px; 
-    display: flex; 
-    align-items: center; 
-    border-bottom: 1px solid #E0D5C0; 
-    z-index: 10;
-}
-
-.back-btn {
-    width: 40px; height: 40px; 
-    border-radius: 50%; 
-    border: 1.5px solid #C9A96E; 
+.continue-card {
+    margin: 0 20px 22px;
     background: #FAF6EC;
-    display: flex; align-items: center; justify-content: center; 
-    cursor: pointer; 
-    font-size: 20px;
-}
-
-.read-title { flex: 1; text-align: center; margin: 0 10px; }
-.read-title h2 { font-size: 22px; color: #B8955E; }
-.read-title p { font-size: 13px; color: #6B5344; }
-
-.bismillah-read {
-    text-align: center; 
-    padding: 30px 20px 20px; 
-    font-size: 28px; 
-    color: #B8955E; 
-    line-height: 1.6;
-}
-
-.ayah {
-    margin: 12px 20px; 
-    padding: 20px; 
-    background: #FAF6EC; 
-    border: 1px solid #E0D5C0;
-    border-radius: 14px; 
-    font-size: 23px; 
-    line-height: 2.4; 
-    text-align: right; 
-    position: relative;
-}
-
-.ayah-num {
-    position: absolute; 
-    left: 15px; 
-    top: 15px; 
-    background: #C9A96E; 
-    color: white;
-    width: 28px; height: 28px; 
-    border-radius: 50%; 
+    border: 1.5px solid #E0D5C0;
+    border-radius: 16px;
+    padding: 16px 18px;
     display: flex; 
     align-items: center; 
-    justify-content: center; 
-    font-size: 12px;
+    gap: 14px;
+    cursor: pointer;
 }
+.continue-icon {
+    width: 52px; height: 52px;
+    background: #EDE5D2;  
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+}
+.continue-icon svg { width: 28px; height: 28px; stroke: #B8955E; fill: none; }
+
+.continue-info h3 { 
+    font-size: 18px; 
+    font-weight: 700; 
+    margin-bottom: 2px;
+}
+.continue-info p { 
+    font-size: 13.5px; 
+    color: #6B5344; 
+}
+
+.section-label {
+    padding: 8px 20px 10px;
+    font-size: 12px; 
+    font-weight: 700;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    color: #8B7355;
+}
+
+.surah-item {
+    display: flex; 
+    align-items: center;
+    padding: 14px 20px;
+    margin: 0 20px 8px;
+    background: #FAF6EC;
+    border: 1px solid #E0D5C0;
+    border-radius: 12px;
+    gap: 14px;
+    cursor: pointer;
+}
+.surah-item:active { background: #EDE5D2; }
+
+.surah-num {
+    width: 40px; height: 40px;
+    background: #EDE5D2;
+    border: 1.5px solid #C9A96E;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; 
+    color: #B8955E;
+    flex-shrink: 0;
+}
+.surah-info { flex: 1; min-width: 0; }
+.surah-name { font-weight: 600; font-size: 15.5px; }
+.surah-mean { font-size: 12.5px; color: #6B5344; margin-top: 1px; }
+.surah-arabic { text-align: right; flex-shrink: 0; }
+.surah-arabic-name { font-size: 17px; color: #B8955E; }
+.surah-ayahs { font-size: 12px; color: #8B7355; margin-top: 2px; }
 
 .bottom-nav {
-    position: fixed; 
+    position: fixed;
     bottom: 0; left: 0; right: 0; 
     background: #FAF6EC;
-    border-top: 1px solid #E0D5C0; 
+    border-top: 1px solid #E0D5C0;
     display: flex; 
-    justify-content: space-around; 
-    padding: 8px 0; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
     z-index: 999;
 }
-
-.nav-btn { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 4px; 
-    padding: 6px 16px; 
+.nav-btn {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 4px;
+    padding: 6px 16px;
+    background: none; border: none;
+    cursor: pointer;
 }
-.nav-btn.active { color: #C9A96E; }
+.nav-btn svg { width: 22px; height: 22px; stroke: #8B7355; fill: none; }
+.nav-btn span { font-size: 11px; color: #8B7355; }
+.nav-btn.active svg { stroke: #C9A96E; }
+.nav-btn.active span { color: #C9A96E; font-weight: 600; }
+
+.page { display: none; }
+.page.active { display: block; }
